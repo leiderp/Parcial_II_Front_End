@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Simonetta&display=swap');
+
+html,body{
+    background-image: url('http://getwallpapers.com/wallpaper/full/f/5/b/581963.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    font-family: 'Simonetta', sans-serif;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+.card-body{
+    margin-top: 20px;
+}
+.cardList{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 80%;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+.cardQs-body{
+    font-size: 12px;
+}
+.cardQs{
+    height: auto;
+    margin-top: 1%;
+    margin-bottom: auto;
+    width: 80%;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+.avatar span{
+    font-size: 80px;
+    position: absolute;
+    top: 4px;
+}
+
+.social_icon span{
+    font-size: 55px;
+    margin-left: 10px;
+}
+.social_icon .clfa {
+    color: rgb(18, 54, 255);
+}
+.social_icon .clg {
+    color: rgb(255, 18, 38);
+}
+.social_icon .clt {
+    color: rgb(18, 219, 255);
+}
+.social_icon .clfa:hover{
+    color: white;
+    cursor: pointer;
+}
+.social_icon .clg:hover{
+    color: white;
+    cursor: pointer;
+}
+.social_icon .clt:hover{
+    color: white;
+    cursor: pointer;
+}
+.card-header h3{
+    color: white;
+}
+
+.social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+}
+
+input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+    color: white;
+}
+
+.remember input
+{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn{
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+}
+
+.login_btn:hover{
+    color: black;
+    font-style: italic;
+    background-color: white;
+}
+
+.links{
+    color: white;
+}
+
+.links a{
+    margin-left: 4px;
+}
+ a:hover{
+    font-style: italic;
+    color: #FFC312;
+}
+
+.table tbody {
+    color: rgb(226, 221, 241);
+    font-size: 15px;
+}
+.barra{
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
