@@ -17,7 +17,7 @@ html,body{
 
 
 .card{
-    height: 400px;
+    height: 430px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
@@ -175,4 +175,58 @@ input:focus{
 option{
     color: white;
     background-color: rgb(66, 66, 66);
+}
+
+.div-select{
+    padding-bottom: 15px;
+}
+
+#concuest {
+    padding: 20px 25px 25px;
+    box-shadow: 
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
+        0px 4px 20px rgba( 0,0,0,0.33 );
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    display: table;
+    position: static;
+}
+
+#cuest {
+    width: 900px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 60px;
+    margin-bottom: 20px;
+}
+
+.sep {
+    height: 1px;
+    background: #e8e8e8;
+    width: 406px;
+    margin: 10px -25px;
+}
+
+ul.votacion{
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.votacion li a{
+    color: gray;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.votacion li a:hover{
+    color: black;
+}
+
+.votacion li span{
+    margin-left: 10px;
+}
+
+.votacion .fl{
+    margin-bottom: 5px;
 }
