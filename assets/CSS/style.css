@@ -42,8 +42,8 @@ html,body{
     margin-top: 20px;
 }
 .cardList{
-    height: 370px;
-    margin-top: auto;
+    height: 450px;
+    margin-top: 50px;
     margin-bottom: auto;
     width: 80%;
     background-color: rgba(0,0,0,0.5) !important;
@@ -157,6 +157,14 @@ input:focus{
     color: rgb(226, 221, 241);
     font-size: 15px;
 }
+.my-custom-scrollbar {
+    position: relative;
+    height: 380px;
+    overflow: auto;
+    }
+.table-wrapper-scroll-y {
+    display: block;
+    }
 .barra{
     margin-top: 5%;
     margin-bottom: 10%;
