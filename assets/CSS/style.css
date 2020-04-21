@@ -214,24 +214,42 @@ option{
 }
 
 ul.votacion{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     list-style: none;
 }
-
+.votacion li{
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
 .votacion li a{
     color: gray;
     font-weight: bold;
     font-size: 16px;
 }
-
 .votacion li a:hover{
     color: black;
 }
-
 .votacion li span{
     margin-left: 10px;
 }
-
 .votacion .fl{
     margin-bottom: 5px;
+}
+.volver{
+    display: block;
+    padding-top: 15px;
+    clear: both;
+}
+
+h3{
+    margin-top: 20px;
+    font-size: 21px;
+    border-top: 1px solid #DDD;
+    padding-top: 15px;
+    text-align: center;
+}
+
+h2{
+    color: white;
 }
