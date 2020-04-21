@@ -261,3 +261,11 @@ h3{
 h2{
     color: white;
 }
+
+.modal-header h2{
+    padding-left: 35%;
+}
+
+#close{
+    color: white;
+}
