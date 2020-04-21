@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    
+
     <!-- Stylesheet-->
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/animate.css">
@@ -19,6 +19,96 @@
 
   </head>
   <body>
+    <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color bg-dark">
+  <!-- Navbar brand -->
+  <a class="navbar-brand" href="#">Navbar</a>
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <!-- Dropdown -->
+      <li class="nav-item dropdown multi-level-dropdown">
+        <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Dropdown</a>
+        <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
+          <li class="dropdown-item dropdown-submenu p-0">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Click Me Too! </a>
+            <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-white w-100">Hey</a>
+              </li>
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-white w-100">Hi</a>
+              </li>
+              <li class="dropdown-item dropdown-submenu p-0">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Hello </a>
+                <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
+                  <li class="dropdown-item p-0">
+                    <a href="#" class="text-white w-100">Some</a>
+                  </li>
+                  <li class="dropdown-item p-0">
+                    <a href="#" class="text-white w-100">Text</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown-item dropdown-submenu">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Click me </a>
+            <ul class="dropdown-menu mr-2 rounded-0  primary-color border-0 z-depth-1 r-100 ">
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-white w-100">How</a>
+              </li>
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-white w-100">are</a>
+              </li>
+              <li class="dropdown-item p-0">
+                <a href="#" class="text-white w-100">you </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <form class="form-inline">
+          <div class="md-form my-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </div>
+        </form>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i> Profile </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+          <a class="dropdown-item" href="#">My account</a>
+          <a class="dropdown-item" href="#">Log out</a>
+        </div>
+      </li>
+    </ul>
+    <!-- Links -->
+  </div>
+  <!-- Collapsible content -->
+</nav>
+<!--/.Navbar-->
     <div class="container animated zoomInDown">
       <div class="d-flex justify-content-center h-100">
         <div class="cardList">
@@ -159,7 +249,7 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <canvas id="densityChart" width="600" height="400"></canvas>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -168,12 +258,74 @@
     </div>
   </div>
 </div>
+</div>
+    <!-- Footer -->
+<footer class="page-footer font-small mdb-color pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row d-flex align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8">
+
+        <!--Copyright-->
+        <p class="text-center text-md-left">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/">
+            <strong> MDBootstrap.com</strong>
+          </a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <!-- Social buttons -->
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
     </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+</footer>
+<!-- Footer -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="/__/firebase/7.8.1/firebase-app.js"></script>
 
@@ -184,5 +336,52 @@
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
 
+<script>
+var densityCanvas = document.getElementById("densityChart");
+
+Chart.defaults.global.defaultFontFamily = "Lato";
+Chart.defaults.global.defaultFontSize = 18;
+
+var densityData = {
+  label: 'Density of Planet (kg/m3)',
+  data: [5427, 5243, 5514, 3933, 1326, 687, 1271, 1638],
+  backgroundColor: 'rgba(0, 99, 132, 0.6)',
+  borderWidth: 0,
+  yAxisID: "y-axis-density"
+};
+
+var gravityData = {
+  label: 'Gravity of Planet (m/s2)',
+  data: [3.7, 8.9, 9.8, 3.7, 23.1, 9.0, 8.7, 11.0],
+  backgroundColor: 'rgba(99, 132, 0, 0.6)',
+  borderWidth: 0,
+  yAxisID: "y-axis-gravity"
+};
+
+var planetData = {
+  labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+  datasets: [densityData, gravityData]
+};
+
+var chartOptions = {
+  scales: {
+    xAxes: [{
+      barPercentage: 1,
+      categoryPercentage: 0.6
+    }],
+    yAxes: [{
+      id: "y-axis-density"
+    }, {
+      id: "y-axis-gravity"
+    }]
+  }
+};
+
+var barChart = new Chart(densityCanvas, {
+  type: 'bar',
+  data: planetData,
+  options: chartOptions
+});
+</script>
   </body>
 </html>
