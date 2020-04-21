@@ -58,6 +58,11 @@ html,body{
     width: 80%;
     background-color: rgba(0,0,0,0.5) !important;
 }
+#scrol{
+    width: auto;
+    height: 450px;
+    overflow-y: scroll;
+}
 .avatar span{
     font-size: 80px;
     position: absolute;
