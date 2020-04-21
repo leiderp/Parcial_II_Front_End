@@ -162,6 +162,9 @@ input:focus{
     height: 380px;
     overflow: auto;
     }
+    .modal-header{
+        padding-left: 50px;;
+    }
 .table-wrapper-scroll-y {
     display: block;
     }
