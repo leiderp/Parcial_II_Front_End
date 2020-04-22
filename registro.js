@@ -6,20 +6,23 @@ firebase.auth().onAuthStateChanged(function(user) {
     var docuType = document.getElementById("Dtype").value;
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
-    var imge=uploadimg();
-    console.log(imag);
+    var imag = document.getElementById("inputGroupFile01").files[0];
      
     
     if (user) {
         uid = firebase.auth().currentUser.uid;
+        console.log(imag);
+        var imge=uploadimg(imag);
+        console.log(imge);
 
         firebase.database().ref("users/" + uid).set({
             "email": useremail,
             "password": userpassword,
             "uid": uid,
         }).then(function(){
-            location.href = "operators.html";
+            // location.href = "operators.html";
         });
+
         
         
 
@@ -35,6 +38,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function registro(){
+    console.log("le di");
     var useremail = document.getElementById("useremail").value;
     var userpassword = document.getElementById("userpassword").value;
 
@@ -68,8 +72,11 @@ function login(){
 function locate(){
     location.href = "operators.html";
 }
-function uploadimg(){
-    var imag =document.getElementById("inputGroupFile01").value;
+
+function uploadimg(imag){
+
+    
+
 
         // Create a root reference
     var storageRef = firebase.storage().ref();
@@ -81,7 +88,7 @@ function uploadimg(){
     function(snapshot){
 
     }, function(error){
-        alert(error);
+        window.alert(error.message);
     },function(){
         var URLimag = mountainsRef.snapshot.downloadURL;
         return URLimag;
