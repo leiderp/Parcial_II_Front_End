@@ -7,7 +7,8 @@ firebase.auth().onAuthStateChanged(function(user) {
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
     var imge=uploadimg();
-
+     
+    
     if (user) {
         uid = firebase.auth().currentUser.uid;
 
