@@ -6,17 +6,21 @@ firebase.auth().onAuthStateChanged(function(user) {
     var docuType = document.getElementById("Dtype").value;
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
-    var imge=uploadimg();
+    // var imge=uploadimg();
+    var imag =document.getElementById("inputGroupFile01").value;
+    console.log(imag);
      
     
     if (user) {
         uid = firebase.auth().currentUser.uid;
 
-        llenarbd(uid,useremail,userpassword);
-        // let p1 = new Promise((resolve, reject)=> llenarbd(uid,useremail,userpassword));
-
-        // let p2 = new Promise((resolve, reject)=> locate());
-
+        firebase.database().ref("users/" + uid).set({
+            "email": useremail,
+            "password": userpassword,
+            "uid": uid,
+        }).then(function(){
+            location.href = "operators.html";
+        });
         
         
 
@@ -61,15 +65,6 @@ function login(){
     }); 
 }
 
-function llenarbd(uid, email, password){
-    firebase.database().ref("users/" + uid).set({
-        "email": email,
-        "password": password,
-        "uid": uid,
-    }).then(function(){
-        location.href = "operators.html";
-    });
-}
 
 function locate(){
     location.href = "operators.html";
