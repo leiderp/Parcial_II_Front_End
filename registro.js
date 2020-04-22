@@ -64,7 +64,3 @@ function llenarbd(uid, email, password){
         location.href = "operators.html";
     });
 }
-
-function locate(){
-    location.href = "operators.html";
-}
