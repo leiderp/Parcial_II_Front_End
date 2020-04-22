@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
     var imge=uploadimg();
-    console.log(imag);
+    console.log(imge);
      
     
     if (user) {
@@ -69,7 +69,7 @@ function locate(){
     location.href = "operators.html";
 }
 function uploadimg(){
-    var imag =document.getElementById("inputGroupFile01").value;
+    var imag =document.getElementById("inputGroupFile01").files[0];
 
         // Create a root reference
     var storageRef = firebase.storage().ref();
