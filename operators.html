@@ -411,23 +411,15 @@ $('#maintb tbody').on('click','#bUpdate',function(){
   document.getElementById("address2").value = currow.find('td:eq(3)').text();
 })
 
-$(document).ready(function(){
-  $("select[name=statusOp]").change(function(){
-    alert($('select[name=statusOp]').val());
-  });
-});
+$('#maintb tbody').on('change','#statusOp',function(event){
+  var currow = $(this).closest('tr');
+  var idDocOp= currow.find('td:eq(0)').text();
+  var nameOp= currow.find('td:eq(1)').text();
+  var emailOp = currow.find('td:eq(2)').text();
+  var dirOp = currow.find('td:eq(3)').text();
+  alert(idDocOp+""+nameOp+" "+emailOp+" "+dirOp)
 
-function getDataOnChange(){
-  alert("hellow world")
-  var tabl =  document.getElementById('maintb'), rindex;
-  for (var i = 0; i < tabl.rows.length; i++) {
-    tabl.rows[i].onclick = function(){
-      rindex = this.rowIndex;
-      alert(this.cells[0].innerHTML);
-    };
-    
-  }
-}
+});
 
 </script>
 
