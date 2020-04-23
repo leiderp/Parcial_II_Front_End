@@ -27,7 +27,7 @@ function agregarf(name, id, email, dir){
                     <td>${email}</td>\
                     <td>${dir}</td>\
                     <td>\
-                        <select class="custom-select check-b">\
+                        <select class="custom-select check-b" id"selected">\
                             <option  value="1">Enable</option>\
                             <option value="2">Disable</option>\
                         </select>\

@@ -43,7 +43,8 @@ function registroop(){
                         "companyname": snapshot.val().companyname,
                         "password": userpassword,
                         "uid": user.uid,
-                        "usertype": "operator"
+                        "usertype": "operator",
+                        "status" : "enable"
                     }).then(function(){
                         // location.href = "operators.html";
                     });
