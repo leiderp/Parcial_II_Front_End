@@ -7,7 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
     var imag = document.getElementById("inputGroupFile01").files[0];
-    var imge = "";
+    console.log(document.getElementById("Dtype"));
      
     
     if (user) {
@@ -32,12 +32,16 @@ firebase.auth().onAuthStateChanged(function(user) {
             mountainsRef.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                 console.log(downloadURL);
                 firebase.database().ref("users/" + uid).set({
+                    "name": name,
+                    "iddocument": idDoc,
+                    "documenttype": docuType,
                     "email": useremail,
+                    "imageURL" : downloadURL,
+                    "companyname": company,
                     "password": userpassword,
                     "uid": uid,
                 }).then(function(){
-                    
-                    // location.href = "operators.html";
+                    location.href = "operators.html";
                 });
 
             }); 
