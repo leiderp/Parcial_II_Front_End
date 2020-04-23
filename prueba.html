@@ -1,0 +1,49 @@
+<h2>My First JavaScript</h2>
+<!--
+la idea principal es traer los datos de una fila, yo lo hago de la siguiente forma en la parte de html de boton le traigo un ejemplo 
+-->
+<html>
+        <button class="massshow-modal btn btn-info" 
+        data-id="34"
+        data-nombre="marcos"
+        data-apellido="alberto"
+
+        ><span class="glyphicon glyphicon-edit"></span> Editar</button>
+
+        <button class="massshow-modal btn btn-info" 
+        data-id="31"
+        data-nombre="marcos_3"
+        data-apellido="alberto_4"
+
+        ><span class="glyphicon glyphicon-edit"></span> Editar</button>
+
+</html>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+<input type='text' class='form-control' id='id_mass' maxlength='45'   required='required' autofocus>
+<input type='text' class='form-control' id='nombre_mass' maxlength='45'   required='required' autofocus>
+<input type='text' class='form-control' id='apellido_mass' maxlength='45'   required='required' autofocus>
+
+<script type='text/javascript'>
+
+  // Show a post
+        $(document).on('click', '.massshow-modal', function() {
+            //$('.modal-descripcion').text('Vista de los Datos');
+            //$('#msdelete').text(' ');
+            $('#id_mass').val($(this).data('id'));
+            $('#nombre_mass').val($(this).data('nombre'));
+            $('#apellido_mass').val($(this).data('apellido'));
+
+            //$('#massModal').modal('show');
+            //$('#acciones').attr('class', 'btn btn-info hibe');
+            //$('#acciones').text('Visible');
+            //$('#acciones').attr('disabled');
+
+        });
+</script>
+
+
+</body>
+</html> 
+compartir

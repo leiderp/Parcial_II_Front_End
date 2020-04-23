@@ -333,3 +333,8 @@ a:link{
 #btnCreate:hover{
 background-color: darkorange;
 }
+
+.selected {
+    background-color: brown;
+    color: #FFF;
+}
