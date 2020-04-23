@@ -7,7 +7,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
     var imag = document.getElementById("inputGroupFile01").files[0];
-    console.log(document.getElementById("Dtype"));
      
     
     if (user) {
@@ -42,6 +41,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     "uid": uid,
                     "usertype": "company"
                 }).then(function(){
+                    localStorage.uid = firebase.auth().currentUser.uid;
                     location.href = "operators.html";
                 });
 

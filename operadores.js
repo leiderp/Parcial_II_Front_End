@@ -1,33 +1,24 @@
 var tbody = document.getElementById("tbody");
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        db = firebase.database();
-        var us = db.ref("users/" + user.uid);
 
-        us.on("value", function(snapshot) {
 
-            var query = db.ref("users");
-            
-            query.orderByChild("companyname").equalTo(snapshot.val().companyname).on("value", function(snapshot) {
-                snapshot.forEach(function(data) {
-                    console.log()
-                    if(data.val().usertype == "operator"){
-                        agregarf(data.val().name, data.val().iddocument, data.val().email,data.val().address);
-                    }
-                });
-            });
-
+db = firebase.database();
+var us = db.ref("users/" + localStorage.uid);
+us.on("value", function(snapshot) {
+    var query = db.ref("users");
+    
+    query.orderByChild("companyname").equalTo(snapshot.val().companyname).on("value", function(snapshot) {
+        tbody.innerHTML = "";
+        snapshot.forEach(function(data) {
+            if(data.val().usertype == "operator"){
+                agregarf(data.val().name, data.val().iddocument, data.val().email,data.val().address);
+            }
         });
-        
-    } else {
-      // User is signed out.
-      // ...
-    }
+    });
 });
 
-function agregarf(name, id, email, dir){
 
-    
+
+function agregarf(name, id, email, dir){
                     
     let html = `<tr>\
                     <th scope="row" class="text-black">1</th>\

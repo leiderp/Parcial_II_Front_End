@@ -194,6 +194,12 @@
               </div>
               <div class="input-group form-group">
                 <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Address" id="address">
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-images"></i></span>
                 </div>
                 <div class="custom-file">
@@ -214,7 +220,7 @@
     
           <!--Footer-->
           <div class="modal-footer justify-content-center">
-            <a type="button" class="btn login_btn waves-effect waves-light" id="btnCreate">Create
+            <a type="button" onclick="registroop()" class="btn login_btn waves-effect waves-light" id="btnCreate" data-dismiss="modal">Create
               <i class="fa fa-paper-plane ml-1"></i>
             </a>
             <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">Cancel</a>
@@ -311,8 +317,19 @@
   firebase.analytics();
 </script>
 
+<script src="registerop.js"></script>
 <script src="operadores.js"></SCript>  
 <script src="logout.js"></script>
+
+<script>
+  $('#inputGroupFile01').on('change',function(){
+      //get the file name
+      var fileName = $(this).val();
+      //replace the "Choose a file" label
+      fileName = fileName.replace('C:\\fakepath\\'," ");
+      $(this).next('.custom-file-label').html(fileName);
+  })
+</script>
 
   </body>
 </html>
