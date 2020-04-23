@@ -410,6 +410,20 @@ $('#maintb tbody').on('click','#bUpdate',function(){
   document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
   document.getElementById("address2").value = currow.find('td:eq(3)').text();
 })
+
+$('#maintb tbody').on('click','#selected2',function(){
+  var currow = $(this).closest('tr');
+  document.getElementById("name2").value= currow.find('td:eq(0)').text();
+  document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
+  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+  document.getElementById("address2").value = currow.find('td:eq(3)').text();
+})
+
+
+</script>
+
+<script>
+  
 </script>
 <script src="registerop.js"></script>
 <script src="operadores.js"></SCript>  
@@ -424,6 +438,8 @@ $('#maintb tbody').on('click','#bUpdate',function(){
       fileName = fileName.replace('C:\\fakepath\\'," ");
       $(this).next('.custom-file-label').html(fileName);
   })
+
+  
 </script>
 
   </body>
