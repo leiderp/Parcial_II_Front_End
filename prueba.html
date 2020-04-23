@@ -7,58 +7,103 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
     <title>Hello, world!</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
 
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
-      </div>
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
-      </div>
-    </div>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-1">Launch
+      modal</button>
     
-    <div class="input-group mb-3">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile02">
-        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-      </div>
-      <div class="input-group-append">
-        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-      </div>
-    </div>
+    <!-- Modal: modalPoll -->
+    <div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <p class="heading lead">Feedback request
+            </p>
     
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
-      </div>
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
-        <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
-      </div>
-    </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">×</span>
+            </button>
+          </div>
     
-    <div class="input-group">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
-        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+          <!--Body-->
+          <div class="modal-body">
+            <div class="text-center">
+              <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+              <p>
+                <strong>Your opinion matters</strong>
+              </p>
+              <p>Have some ideas how to improve our product?
+                <strong>Give us your feedback.</strong>
+              </p>
+            </div>
+    
+            <hr>
+    
+            <!-- Radio -->
+            <p class="text-center">
+              <strong>Your rating</strong>
+            </p>
+            <div class="form-check mb-4">
+              <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+              <label class="form-check-label" for="radio-179">Very good</label>
+            </div>
+    
+            <div class="form-check mb-4">
+              <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+              <label class="form-check-label" for="radio-279">Good</label>
+            </div>
+    
+            <div class="form-check mb-4">
+              <input class="form-check-input" name="group1" type="radio" id="radio-379" value="option3">
+              <label class="form-check-label" for="radio-379">Mediocre</label>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" name="group1" type="radio" id="radio-479" value="option4">
+              <label class="form-check-label" for="radio-479">Bad</label>
+            </div>
+            <div class="form-check mb-4">
+              <input class="form-check-input" name="group1" type="radio" id="radio-579" value="option5">
+              <label class="form-check-label" for="radio-579">Very bad</label>
+            </div>
+            <!-- Radio -->
+    
+            <p class="text-center">
+              <strong>What could we improve?</strong>
+            </p>
+            <!--Basic textarea-->
+            <div class="md-form">
+              <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+              <label for="form79textarea">Your message</label>
+            </div>
+    
+          </div>
+    
+          <!--Footer-->
+          <div class="modal-footer justify-content-center">
+            <a type="button" class="btn btn-primary waves-effect waves-light">Send
+              <i class="fa fa-paper-plane ml-1"></i>
+            </a>
+            <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
+          </div>
+        </div>
       </div>
-      <label class="btn btn-file">
-        <input type="file" name="" value="">
-      </label>
     </div>
+    <!-- Modal: modalPoll -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
       $('#inputGroupFile01').on('change',function(){
           //get the file name
