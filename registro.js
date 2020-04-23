@@ -40,6 +40,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     "companyname": company,
                     "password": userpassword,
                     "uid": uid,
+                    "usertype": "company"
                 }).then(function(){
                     location.href = "operators.html";
                 });
