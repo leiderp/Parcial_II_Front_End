@@ -21,7 +21,7 @@ us.on("value", function(snapshot) {
 function agregarf(name, id, email, dir){
                     
     let html = `<tr>\
-                    <th scope="row" class="text-black">1</th>\
+                    <th scope="row" class="text-black">2</th>\
                     <td class="numero">${id}</td>\
                     <td>${name}</td>\
                     <td>${email}</td>\

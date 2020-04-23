@@ -233,11 +233,11 @@
     <!-- Modal: modalPoll -->
     <div class="modal fade right" id="modalPoll-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true" data-backdrop="false">
-      <div class="modal-dialog modal-full-height modal-right modal-notify modal-info animated fadeInRightBig" role="document">
+      <div class="modal-dialog modal-full-height modal-right modal-notify modal-info animated fadeInRightBig " role="document">
         <div class="modal-content">
           <!--Header-->
-          <div class="modal-header">
-            <p class="heading lead">Operator Register
+          <div class="modal-header bg-dark text-white">
+            <p class="heading lead">Operator Update
             </p>
     
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -252,16 +252,16 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-user"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Name" id="name">
+                <input type="text" class="form-control" placeholder="Name" id="name2">
               </div>
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-id-card"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="ID document" id="IDdoc">
+                <input type="text" class="form-control" placeholder="ID document" id="IDdoc2">
                 <div class="row">
                   <div class="col-md-11 offset-md-1">
-                    <select class="custom-select" id="Dtype">
+                    <select class="custom-select" id="Dtype2">
                       <option value="CC">CC</option>
                       <option value="TI">TI</option>
                       <option value="CE">CE</option>
@@ -273,22 +273,28 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-at"></i></span>
                 </div>
-                <input type="text" class="form-control" placeholder="Email" id="useremail">
+                <input type="text" class="form-control" placeholder="Email" id="useremail2">
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Address" id="address2">
               </div>
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-images"></i></span>
                 </div>
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
-                  <label class="custom-file-label" for="inputGroupFile01" id="label">Choose image</label>
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
+                  <label class="custom-file-label" for="inputGroupFile02" id="label">Choose image</label>
                 </div>
               </div>
               <div class="input-group form-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-key"></i></span>
                 </div>
-                <input type="password" class="form-control" placeholder="password" id="userpassword">
+                <input type="password" class="form-control" placeholder="password" id="userpassword2">
               </div>
               
             </form>
@@ -297,8 +303,8 @@
     
           <!--Footer-->
           <div class="modal-footer justify-content-center">
-            <a type="button" class="btn login_btn waves-effect waves-light" id="btnCreate">send
-              <i class="fa fa-paper-plane ml-1"></i>
+            <a type="button" class="btn login_btn waves-effect waves-light" id="btnCreate">Update
+              <i class="fa fa-edit ml-1"></i>
             </a>
             <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">Cancel</a>
           </div>
@@ -393,19 +399,15 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
+
 <script>
-  var nombre, cod, emeil;
-
-function llenarForm(){
-  alert("Hola")
-  $('#maintb tbody tr').each(function(idx,fila){
-    cod=fila.children[0].innerHTML;
-    nombre=fila.children[1].innerHTML;
-  emeil=fila.children[2].innerHTML;
-    alert(cod+""+nombre+""+emeil);
-
-  });
-}
+$('#maintb tbody').on('click','#bUpdate',function(){
+  var currow = $(this).closest('tr');
+  document.getElementById("name2").value= currow.find('td:eq(0)').text();
+  document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
+  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+  document.getElementById("address2").value = currow.find('td:eq(3)').text();
+})
 </script>
 <script src="registerop.js"></script>
 <script src="operadores.js"></SCript>  
