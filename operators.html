@@ -27,7 +27,7 @@
     <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-dark">
   <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">Oil S.A.S</a>
   <!-- Collapse button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
     aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,15 +38,15 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
+        <a class="nav-link" href="index.html">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="questions.html">Poll</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">Hols</a>
       </li>
       <!-- Dropdown -->
       <li class="nav-item dropdown multi-level-dropdown">
@@ -404,7 +404,6 @@
 
 <script>
 $('#maintb tbody').on('click','#bUpdate',function(){
-  alert("1111");
   var currow = $(this).closest('tr');
   document.getElementById("name2").value= currow.find('td:eq(0)').text();
   document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
@@ -412,14 +411,23 @@ $('#maintb tbody').on('click','#bUpdate',function(){
   document.getElementById("address2").value = currow.find('td:eq(3)').text();
 })
 
-$('#maintb tbody').on('click','#selected2',function(){
-  var currow = $(this).closest('tr');
-  document.getElementById("name2").value= currow.find('td:eq(0)').text();
-  document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
-  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
-  document.getElementById("address2").value = currow.find('td:eq(3)').text();
-})
+$(document).ready(function(){
+  $("select[name=statusOp]").change(function(){
+    alert($('select[name=statusOp]').val());
+  });
+});
 
+function getDataOnChange(){
+  alert("hellow world")
+  var tabl =  document.getElementById('maintb'), rindex;
+  for (var i = 0; i < tabl.rows.length; i++) {
+    tabl.rows[i].onclick = function(){
+      rindex = this.rowIndex;
+      alert(this.cells[0].innerHTML);
+    };
+    
+  }
+}
 
 </script>
 

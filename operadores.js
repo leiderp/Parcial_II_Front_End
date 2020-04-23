@@ -19,7 +19,7 @@ us.on("value", function(snapshot) {
 
 
 function agregarf(name, id, email, dir){
-                    
+   // <select name="statusOp" class="custom-select check-b" onchange="getDataOnChange()">\
     let html = `<tr>\
                     <th scope="row" class="text-black">2</th>\
                     <td class="numero">${id}</td>\
@@ -27,9 +27,9 @@ function agregarf(name, id, email, dir){
                     <td>${email}</td>\
                     <td>${dir}</td>\
                     <td>\
-                        <select class="custom-select check-b">\
-                            <option  value="1" id"selected" >Enable</option>\
-                            <option value="2" id"selected2">Disable</option>\
+                        <select name="statusOp" class="custom-select check-b">\
+                            <option  value="1" id="selected" >Enable</option>\
+                            <option value="2" id="selected2">Disable</option>\
                         </select>\
                     </td>\
                     <td>\
