@@ -33,7 +33,7 @@ function agregarf(name, id, email, dir){
                         </select>\
                     </td>\
                     <td>\
-                      <button value="bUpdate" id="bUpdate" onclick="llenarForm()" title="bUpdate" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-2"><i class="fas fa-user-edit" aria-hidden="true"></i></button>&nbsp;\
+                      <button value="bUpdate" id="bUpdate" title="bUpdate" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-2"><i class="fas fa-user-edit" aria-hidden="true"></i></button>&nbsp;\
                       <button value="bDelete" title="bDelete" class="btn btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>\
                     </td>\
                 </tr>`;
