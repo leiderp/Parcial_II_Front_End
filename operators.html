@@ -124,7 +124,7 @@
           </div>
           <div class="cardList-body">
             <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
-                <table class="table table-striped table-borderless table-hover mb-0">
+                <table id="maintb" class="table table-striped table-borderless table-hover mb-0">
                   <thead>
                     <tr class="text-black fila">
                         <th scope="col">N°</th>
@@ -229,6 +229,89 @@
       </div>
     </div>
     <!-- Modal: modalPoll -->
+
+    <!-- Modal: modalPoll -->
+    <div class="modal fade right" id="modalPoll-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-full-height modal-right modal-notify modal-info animated fadeInRightBig " role="document">
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header bg-dark text-white">
+            <p class="heading lead">Operator Update
+            </p>
+    
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="white-text">×</span>
+            </button>
+          </div>
+    
+          <!--Body-->
+          <div class="modal-body ">
+            <form>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Name" id="name2">
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="ID document" id="IDdoc2">
+                <div class="row">
+                  <div class="col-md-11 offset-md-1">
+                    <select class="custom-select" id="Dtype2">
+                      <option value="CC">CC</option>
+                      <option value="TI">TI</option>
+                      <option value="CE">CE</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-at"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Email" id="useremail2">
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Address" id="address2">
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-images"></i></span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" aria-describedby="inputGroupFileAddon02">
+                  <label class="custom-file-label" for="inputGroupFile02" id="label">Choose image</label>
+                </div>
+              </div>
+              <div class="input-group form-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control" placeholder="password" id="userpassword2">
+              </div>
+              
+            </form>
+    
+          </div>
+    
+          <!--Footer-->
+          <div class="modal-footer justify-content-center">
+            <a type="button" class="btn login_btn waves-effect waves-light" id="btnCreate">Update
+              <i class="fa fa-edit ml-1"></i>
+            </a>
+            <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">Cancel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal: modalPoll -->
     <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
 
@@ -319,6 +402,15 @@
   firebase.analytics();
 </script>
 
+<script>
+$('#maintb tbody').on('click','#bUpdate',function(){
+  var currow = $(this).closest('tr');
+  document.getElementById("name2").value= currow.find('td:eq(0)').text();
+  document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
+  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+  document.getElementById("address2").value = currow.find('td:eq(3)').text();
+})
+</script>
 <script src="registerop.js"></script>
 <script src="operadores.js"></SCript>  
 <script src="logout.js"></script>

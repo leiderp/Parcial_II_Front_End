@@ -21,8 +21,8 @@ us.on("value", function(snapshot) {
 function agregarf(name, id, email, dir){
                     
     let html = `<tr>\
-                    <th scope="row" class="text-black">1</th>\
-                    <td>${id}</td>\
+                    <th scope="row" class="text-black">2</th>\
+                    <td class="numero">${id}</td>\
                     <td>${name}</td>\
                     <td>${email}</td>\
                     <td>${dir}</td>\
@@ -33,9 +33,10 @@ function agregarf(name, id, email, dir){
                         </select>\
                     </td>\
                     <td>\
-                      <button value="bUpdate" title="bUpdate" class="btn btn-primary"><i class="fas fa-user-edit" aria-hidden="true"></i></button>&nbsp;\
+                      <button value="bUpdate" id="bUpdate" onclick="llenarForm()" title="bUpdate" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-2"><i class="fas fa-user-edit" aria-hidden="true"></i></button>&nbsp;\
                       <button value="bDelete" title="bDelete" class="btn btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>\
                     </td>\
                 </tr>`;
     tbody.innerHTML += html;
 }
+
