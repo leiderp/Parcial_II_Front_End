@@ -290,12 +290,6 @@
                   <label class="custom-file-label" for="inputGroupFile02" id="label">Choose image</label>
                 </div>
               </div>
-              <div class="input-group form-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-key"></i></span>
-                </div>
-                <input type="password" class="form-control" placeholder="password" id="userpassword2">
-              </div>
               
             </form>
     
@@ -303,7 +297,7 @@
     
           <!--Footer-->
           <div class="modal-footer justify-content-center">
-            <a type="button" class="btn login_btn waves-effect waves-light" id="btnCreate">Update
+            <a type="button" onclick="update()" class="btn login_btn waves-effect waves-light" data-dismiss="modal" id="btnCreate">Update
               <i class="fa fa-edit ml-1"></i>
             </a>
             <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal">Cancel</a>
@@ -405,30 +399,22 @@
 <script>
 $('#maintb tbody').on('click','#bUpdate',function(){
   var currow = $(this).closest('tr');
-  document.getElementById("name2").value= currow.find('td:eq(0)').text();
-  document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
-  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
-  document.getElementById("address2").value = currow.find('td:eq(3)').text();
-})
-
-$('#maintb tbody').on('click','#selected2',function(){
-  var currow = $(this).closest('tr');
-  document.getElementById("name2").value= currow.find('td:eq(0)').text();
-  document.getElementById("IDdoc2").value = currow.find('td:eq(1)').text();
-  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
-  document.getElementById("address2").value = currow.find('td:eq(3)').text();
-})
-
-
-</script>
-
-<script>
   
+  document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
+  document.getElementById("name2").value = currow.find('td:eq(1)').text();
+  document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+  document.getElementById("address2").value = currow.find('td:eq(3)').text();
+})
+
+
 </script>
+
 <script src="registerop.js"></script>
 <script src="operadores.js"></SCript>  
 <script src="logout.js"></script>
 <script src="status.js"></script>
+<script src="update.js"></script>
+<script src="remove.js"></script>
 
 <script>
   $('#inputGroupFile01').on('change',function(){
@@ -439,6 +425,13 @@ $('#maintb tbody').on('click','#selected2',function(){
       $(this).next('.custom-file-label').html(fileName);
   })
 
+  $('#inputGroupFile02').on('change',function(){
+      //get the file name
+      var fileName = $(this).val();
+      //replace the "Choose a file" label
+      fileName = fileName.replace('C:\\fakepath\\'," ");
+      $(this).next('.custom-file-label').html(fileName);
+  })
   
 </script>
 

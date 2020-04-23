@@ -27,14 +27,14 @@ function agregarf(name, id, email, dir){
                     <td>${email}</td>\
                     <td>${dir}</td>\
                     <td>\
-                        <select class="custom-select check-b">\
-                            <option  value="1" id"selected" >Enable</option>\
-                            <option value="2" id"selected2">Disable</option>\
+                        <select class="custom-select check-b" id="selected">\
+                            <option  value="1"  >Enable</option>\
+                            <option value="2" >Disable</option>\
                         </select>\
                     </td>\
                     <td>\
                       <button value="bUpdate" id="bUpdate" title="bUpdate" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-2"><i class="fas fa-user-edit" aria-hidden="true"></i></button>&nbsp;\
-                      <button value="bDelete" title="bDelete" class="btn btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>\
+                      <button value="bDelete" id="bDelete" title="bDelete" class="btn btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>\
                     </td>\
                 </tr>`;
     tbody.innerHTML += html;
