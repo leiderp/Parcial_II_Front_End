@@ -398,8 +398,6 @@
 
 <script>
 $('#maintb tbody').on('click','#bUpdate',function(){
-  event.preventDefault();
-  event.stopPropagation();
   var currow = $(this).closest('tr');
   document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
   document.getElementById("name2").value = currow.find('td:eq(1)').text();
