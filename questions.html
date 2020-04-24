@@ -47,28 +47,6 @@
           <li class="nav-item dropdown multi-level-dropdown">
             <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Actions</a>
             <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
-              <li class="dropdown-item dropdown-submenu p-0">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle text-dark w-100">Click Me! </a>
-                <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
-                  <li class="dropdown-item p-0">
-                    <a href="#" class="text-dark w-100">Hey</a>
-                  </li>
-                  <li class="dropdown-item p-0">
-                    <a href="#" class="text-dark w-100">Hi</a>
-                  </li>
-                  <li class="dropdown-item dropdown-submenu p-0">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-dark w-100">Hello </a>
-                    <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
-                      <li class="dropdown-item p-0">
-                        <a href="#" class="text-dark w-100">Some</a>
-                      </li>
-                      <li class="dropdown-item p-0">
-                        <a href="#" class="text-dark w-100">Text</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
               <li class="dropdown-item dropdown-submenu">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle text-dark w-100">Poll Actions </a>
                 <ul class="dropdown-menu mr-2 rounded-0  primary-color border-0 z-depth-1 r-100 ">
@@ -166,6 +144,189 @@
           </div>
         </div>
       </div>
+
+      <!-- Modal: modalPoll -->
+      <div class="modal fade right animated fadeInRightBig" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+          <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header bg-dark text-white">
+              <p class="heading lead">Create Poll
+              </p>
+      
+              <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="white-text">×</span>
+              </button>
+            </div>
+      
+            <!--Body-->
+            <div class="modal-body scrollbar scrollbar-primary force-overflow">
+              <!-- Radio -->
+              <p class="text-center">
+                <strong>1. What is the question?</strong>
+              </p>
+              <!--Basic textarea-->
+              <div class="md-form">
+                <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+              </div>
+              <p class="text-center">
+                <strong>Asnwer Correct</strong>
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+                  <label class="form-check-label text-dark" for="radio-179">Very good</label>
+                </div>
+        
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+                  <label class="form-check-label text-dark" for="radio-279">Good</label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="def-number-input number-input safari_only" id="valueQuest">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+                <label class="form-check-label text-dark"> Score Question</label>
+              </div>
+              <hr>
+              <p class="text-center">
+                <strong>2. What is the question?</strong>
+              </p>
+              <!--Basic textarea-->
+              <div class="md-form">
+                <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+              </div>
+              <p class="text-center">
+                <strong>Asnwer Correct</strong>
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+                  <label class="form-check-label text-dark" for="radio-179">Very good</label>
+                </div>
+        
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+                  <label class="form-check-label text-dark" for="radio-279">Good</label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="def-number-input number-input safari_only" id="valueQuest">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+                <label class="form-check-label text-dark"> Score Question</label>
+              </div>
+              <hr>
+              <p class="text-center">
+                <strong>3. What is the question?</strong>
+              </p>
+              <!--Basic textarea-->
+              <div class="md-form">
+                <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+              </div>
+              <p class="text-center">
+                <strong>Asnwer Correct</strong>
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+                  <label class="form-check-label text-dark" for="radio-179">Very good</label>
+                </div>
+        
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+                  <label class="form-check-label text-dark" for="radio-279">Good</label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="def-number-input number-input safari_only" id="valueQuest">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+                <label class="form-check-label text-dark"> Score Question</label>
+              </div>
+              <hr>
+              <p class="text-center">
+                <strong>4. What is the question?</strong>
+              </p>
+              <!--Basic textarea-->
+              <div class="md-form">
+                <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+              </div>
+              <p class="text-center">
+                <strong>Asnwer Correct</strong>
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+                  <label class="form-check-label text-dark" for="radio-179">Very good</label>
+                </div>
+        
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+                  <label class="form-check-label text-dark" for="radio-279">Good</label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="def-number-input number-input safari_only" id="valueQuest">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+                <label class="form-check-label text-dark"> Score Question</label>
+              </div>
+              <hr>
+              <p class="text-center">
+                <strong>5. What is the question?</strong>
+              </p>
+              <!--Basic textarea-->
+              <div class="md-form">
+                <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+              </div>
+              <p class="text-center">
+                <strong>Asnwer Correct</strong>
+              </p>
+              <div class="d-flex justify-content-center">
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-179" value="option1" checked>
+                  <label class="form-check-label text-dark" for="radio-179">Very good</label>
+                </div>
+        
+                <div class="form-check mb-4">
+                  <input class="form-check-input" name="group1" type="radio" id="radio-279" value="option2">
+                  <label class="form-check-label text-dark" for="radio-279">Good</label>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center">
+                <div class="def-number-input number-input safari_only" id="valueQuest">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                  <input class="quantity" min="0" name="quantity" value="1" type="number">
+                  <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+                <label class="form-check-label text-dark"> Score Question</label>
+              </div>
+              <!-- Radio -->
+      
+            </div>
+      
+            <!--Footer-->
+            <div class="modal-footer justify-content-center">
+              <a type="button" class="btn login_btn waves-effect waves-light" data-dismiss="modal">Create
+                <i class="fa fa-paper-plane ml-1"></i>
+              </a>
+              <a type="button" class="btn btn-outline-danger waves-effect" data-dismiss="modal" >Cancel</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal: modalPoll -->
       <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
 
@@ -181,7 +342,7 @@
         <!--Copyright-->
         <p class="text-center text-md-left">© 2020 Copyright:
           <a href="https://mdbootstrap.com/">
-            <strong> MDBootstrap.com</strong>
+            <strong> leiderp & lazarod</strong>
           </a>
         </p>
 
