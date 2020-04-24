@@ -1,6 +1,4 @@
 $("#btnCreate").click(function() {
-    event.stopPropagation();
-    console.log("le di");
     var useremail = document.getElementById("useremail").value;
     var userpassword = document.getElementById("userpassword").value;
     var name = document.getElementById("name").value;
@@ -45,7 +43,7 @@ $("#btnCreate").click(function() {
                         "password": userpassword,
                         "uid": user.uid,
                         "usertype": "operator",
-                        "status" : "enable"
+                        "status" : "Enable"
                     }).then(function(){
                         
                     });

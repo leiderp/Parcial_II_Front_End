@@ -5,6 +5,7 @@ function update(){
     var docuType = document.getElementById("Dtype2").value;
     var idDoc = document.getElementById("IDdoc2").value;
     var address = document.getElementById("address2").value;
+    var id = document.getElementById("hid").value;
 
 
     db = firebase.database();
@@ -27,7 +28,7 @@ function update(){
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             mountainsRef.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                 console.log(downloadURL);
-                query.orderByChild("iddocument").equalTo(idDoc).on("value", function(snapshot) {
+                query.orderByChild("iddocument").equalTo(id).on("value", function(snapshot) {
                     snapshot.forEach(function(data) {
 
                         console.log(data.val().email);
@@ -75,14 +76,40 @@ function update(){
     }
     catch(error) {
 
-        query.orderByChild("iddocument").equalTo(idDoc).on("value", function(snapshot) {
+        query.orderByChild("iddocument").equalTo(id).on("value", function(snapshot) {
             snapshot.forEach(function(data) {
-                db.ref("users/" + data.val().uid).update({
-                    "name": name,
-                    "iddocument": idDoc,
-                    "documenttype": docuType,
-                    "email": useremail,
-                    "address": address,
+                firebase.auth().signInWithEmailAndPassword(data.val().email, data.val().password).then(function(){
+
+                    var user = firebase.auth().currentUser;
+
+                    console.log(data.val().email);
+
+                    console.log(useremail);
+
+    
+                    user.updateEmail(useremail).then(function() {
+
+                        db.ref("users/" + data.val().uid).update({
+                            "name": name,
+                            "iddocument": idDoc,
+                            "documenttype": docuType,
+                            "email": useremail,
+                            "address": address,
+                        });
+                        // Update successful.
+                    }).catch(function(error) {
+                        // An error happened.
+                    });
+                      
+                      
+    
+    
+                }).catch(function(error) {
+                    // Handle Errors here.
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                    // ...
+                    window.alert("error: "+errorMessage);
                 });
             });
         });
