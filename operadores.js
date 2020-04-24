@@ -34,7 +34,7 @@ function agregarf(name, id, email, dir, sel, nosel){
                     <td>${email}</td>\
                     <td>${dir}</td>\
                     <td>\
-                        <select name="statusOp" class="custom-select check-b">\
+                        <select name="statusOp" id="statusOp" class="custom-select check-b">\
                             <option  value="1" id="selected" >${sel}</option>\
                             <option value="2" id="selected2">${nosel}</option>\
                         </select>\

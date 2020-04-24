@@ -405,7 +405,7 @@ $('#maintb tbody').on('click','#bUpdate',function(){
   document.getElementById("name2").value = currow.find('td:eq(1)').text();
   document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
   document.getElementById("address2").value = currow.find('td:eq(3)').text();
-})
+});
 
 $('#maintb tbody').on('change','#statusOp',function(event){
   var currow = $(this).closest('tr');
