@@ -28,7 +28,6 @@ us.on("value", function(snapshot) {
 function agregarf(name, id, email, dir, sel, nosel){
    // <select name="statusOp" class="custom-select check-b" onchange="getDataOnChange()">\
     let html = `<tr>\
-                    <th scope="row" class="text-black">2</th>\
                     <td class="numero">${id}</td>\
                     <td>${name}</td>\
                     <td>${email}</td>\

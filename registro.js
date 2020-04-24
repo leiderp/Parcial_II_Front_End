@@ -7,6 +7,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     var idDoc = document.getElementById("IDdoc").value;
     var company = document.getElementById("company").value;
     var imag = document.getElementById("inputGroupFile01").files[0];
+    var phone = document.getElementById("phone").value;
      
     
     if (user) {
@@ -37,6 +38,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     "email": useremail,
                     "imageURL" : downloadURL,
                     "companyname": company,
+                    "phone": phone,
                     "password": userpassword,
                     "uid": uid,
                     "usertype": "company"

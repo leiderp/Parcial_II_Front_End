@@ -45,6 +45,13 @@ $("#btnCreate").click(function() {
                         "usertype": "operator",
                         "status" : "Enable"
                     }).then(function(){
+
+                        document.getElementById("useremail").value= "";
+                        document.getElementById("userpassword").value = "";
+                        document.getElementById("name").value = "";
+                        document.getElementById("IDdoc").value = "";
+                        document.getElementById("address").value = "";
+                        document.getElementById("inputGroupFile01").files[0] = null;
                         
                     });
 

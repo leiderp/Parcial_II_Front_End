@@ -43,16 +43,16 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="questions.html">Poll</a>
+              <a class="nav-link" href="questions.html">Questionnaire</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Hols</a>
+              <a class="nav-link" href="results.html">Results</a>
             </li>
             <!-- Dropdown -->
             <li class="nav-item dropdown multi-level-dropdown">
               <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Actions</a>
               <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
-                <li class="dropdown-item dropdown-submenu p-0">
+                <!-- <li class="dropdown-item dropdown-submenu p-0">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle text-dark w-100">Click Me! </a>
                   <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
                     <li class="dropdown-item p-0">
@@ -73,19 +73,19 @@
                       </ul>
                     </li>
                   </ul>
-                </li>
+                </li> -->
                 <li class="dropdown-item dropdown-submenu">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle text-dark w-100">OPerator Actions </a>
                   <ul class="dropdown-menu mr-2 rounded-0  primary-color border-0 z-depth-1 r-100 ">
                     <li class="dropdown-item p-0">
                       <a href="#" class="text-dark w-100" data-toggle="modal" data-target="#modalPoll-1">Create</a>
                     </li>
-                    <li class="dropdown-item p-0">
+                    <!-- <li class="dropdown-item p-0">
                       <a href="#" class="text-dark w-100">are</a>
                     </li>
                     <li class="dropdown-item p-0">
                       <a href="#" class="text-dark w-100">you </a>
-                    </li>
+                    </li> -->
                   </ul>
                 </li>
               </ul>
@@ -127,7 +127,6 @@
                 <table id="maintb" class="table table-striped table-borderless table-hover mb-0">
                   <thead>
                     <tr class="text-black fila">
-                        <th scope="col">N°</th>
                       <th scope="col">ID OPERADOR</th>
                       <th scope="col">NAME</th>
                       <th scope="col">EMAIL</th>
@@ -371,15 +370,17 @@
                     <!-- Card body -->
                     <div id="collapseOne1" class="collapse show text-white" role="tabpanel" aria-labelledby="headingOne1"
                       data-parent="#accordionEx">
-                      <div class="card-body">
-                          <Label><h5>Name Company:</h4> <p id="cname">Aqui name</p></Label>
+                      <div class="card-body scrollbar scrollbar-primary force-overflow" >
+                          <Label><h5>Name of the legal representative:</h4> <p id="usname"></p></Label>
                             <hr>
-                          <Label><h5>Name Company:</h4> <p id="">Aqui name</p></Label>
+                          <Label><h5>ID document:</h4> <p id="iddo">Aqui name</p></Label>  
                             <hr>
-                          <Label><h5>otra cosa:</h4> <p>Aqui name</p></Label>  
+                          <Label><h5>Legal representative's email:</h4> <p id="emailus">Aqui name</p></Label>  
                             <hr>
-                          <Label><h5>Name Company:</h4> <p>Aqui name</p></Label>  
+                          <Label><h5>Legal representative's phone:</h4> <p id="phoneus">Aqui name</p></Label>  
                             <hr>
+                            <Label><h5>Name Company:</h4> <p id="comname">Aqui name</p></Label>  
+                              <hr>
                       </div>
                     </div>
     
@@ -491,6 +492,8 @@
     firebase.analytics();
   </script>
 
+    
+
     <script>
     $('#maintb tbody').on('click','#bUpdate',function(){
       var currow = $(this).closest('tr');
@@ -500,6 +503,16 @@
       document.getElementById("address2").value = currow.find('td:eq(3)').text();
       document.getElementById("hid").value = currow.find('td:eq(0)').text();
     });
+
+    // $('#maintb tbody').on('click','#bDelete',function(){
+    //   var currow = $(this).closest('tr');
+    //   document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
+    //   document.getElementById("name2").value = currow.find('td:eq(1)').text();
+    //   document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+    //   document.getElementById("address2").value = currow.find('td:eq(3)').text();
+    //   document.getElementById("hid").value = currow.find('td:eq(0)').text();
+    //   remove(currow.find('td:eq(0)').text());
+    // });
 
     $('#maintb tbody').on('change','#statusOp',function(event){
       var currow = $(this).closest('tr');
@@ -519,6 +532,8 @@
     <script src="status.js"></script>
     <script src="update.js"></script>
     <script src="infocomp.js"></script>
+    <!-- <script src="remove.js"></script> -->
+    
     <!-- <script src="remove.js"></script> -->
     
     <script>

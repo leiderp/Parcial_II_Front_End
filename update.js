@@ -31,18 +31,9 @@ function update(){
                 query.orderByChild("iddocument").equalTo(id).on("value", function(snapshot) {
                     snapshot.forEach(function(data) {
 
-                        console.log(data.val().email);
-
-                        console.log(data.val().uid);
-
                         firebase.auth().signInWithEmailAndPassword(data.val().email, data.val().password).then(function(){
 
                             var user = firebase.auth().currentUser;
-
-                            console.log(data.val().email);
-
-                            console.log(useremail);
-
             
                             user.updateEmail(useremail).then(function() {
 
