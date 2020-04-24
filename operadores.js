@@ -10,7 +10,14 @@ us.on("value", function(snapshot) {
         tbody.innerHTML = "";
         snapshot.forEach(function(data) {
             if(data.val().usertype == "operator"){
-                agregarf(data.val().name, data.val().iddocument, data.val().email,data.val().address);
+                var sel = data.val().status;
+                if(sel == "Enable"){
+                    var nosel = "Disable";
+                }else{
+                    var nosel = "Enable";
+                }
+                
+                agregarf(data.val().name, data.val().iddocument, data.val().email,data.val().address, sel , nosel);
             }
         });
     });
@@ -18,8 +25,8 @@ us.on("value", function(snapshot) {
 
 
 
-function agregarf(name, id, email, dir){
-                    
+function agregarf(name, id, email, dir, sel, nosel){
+   // <select name="statusOp" class="custom-select check-b" onchange="getDataOnChange()">\
     let html = `<tr>\
                     <th scope="row" class="text-black">2</th>\
                     <td class="numero">${id}</td>\
@@ -27,9 +34,9 @@ function agregarf(name, id, email, dir){
                     <td>${email}</td>\
                     <td>${dir}</td>\
                     <td>\
-                        <select class="custom-select check-b" id="selected">\
-                            <option  value="1"  >Enable</option>\
-                            <option value="2" >Disable</option>\
+                        <select name="statusOp" class="custom-select check-b">\
+                            <option  value="1" id="selected" >${sel}</option>\
+                            <option value="2" id="selected2">${nosel}</option>\
                         </select>\
                     </td>\
                     <td>\

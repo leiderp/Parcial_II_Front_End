@@ -1,4 +1,5 @@
-function registroop(){
+$("#btnCreate").click(function() {
+    event.stopPropagation();
     console.log("le di");
     var useremail = document.getElementById("useremail").value;
     var userpassword = document.getElementById("userpassword").value;
@@ -46,7 +47,7 @@ function registroop(){
                         "usertype": "operator",
                         "status" : "enable"
                     }).then(function(){
-                        // location.href = "operators.html";
+                        
                     });
 
                 }); 
@@ -60,4 +61,5 @@ function registroop(){
         window.alert("Error: "+errorMessage);
         // ...
     });
-}
+    console.log("termino registro");
+});

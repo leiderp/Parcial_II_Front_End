@@ -29,14 +29,45 @@ function update(){
                 console.log(downloadURL);
                 query.orderByChild("iddocument").equalTo(idDoc).on("value", function(snapshot) {
                     snapshot.forEach(function(data) {
-                        db.ref("users/" + data.val().uid).update({
-                            "name": name,
-                            "iddocument": idDoc,
-                            "documenttype": docuType,
-                            "email": useremail,
-                            "imageURL" : downloadURL,
-                            "address": address,
-                        });
+
+                        console.log(data.val().email);
+
+                        console.log(data.val().uid);
+
+                        firebase.auth().signInWithEmailAndPassword(data.val().email, data.val().password).then(function(){
+
+                            var user = firebase.auth().currentUser;
+
+                            console.log(data.val().email);
+
+                            console.log(useremail);
+
+            
+                            user.updateEmail(useremail).then(function() {
+
+                                db.ref("users/" + data.val().uid).update({
+                                    "name": name,
+                                    "iddocument": idDoc,
+                                    "documenttype": docuType,
+                                    "email": useremail,
+                                    "imageURL" : downloadURL,
+                                    "address": address,
+                                });
+                                // Update successful.
+                            }).catch(function(error) {
+                                // An error happened.
+                            });
+                              
+                              
+            
+            
+                        }).catch(function(error) {
+                            // Handle Errors here.
+                            var errorCode = error.code;
+                            var errorMessage = error.message;
+                            // ...
+                            window.alert("error: "+errorMessage);
+                        }); 
                     });
                 });
             }); 
