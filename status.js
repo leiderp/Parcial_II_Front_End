@@ -9,7 +9,6 @@ function changeState(iddoc,state){
             return true;
         });
     });
-
 }
 
 

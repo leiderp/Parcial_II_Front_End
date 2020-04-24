@@ -319,35 +319,25 @@
                 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
                   data-ride="carousel">
                   <!--Slides-->
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(23).jpg"
+                  <div class="carousel-inner" role="listbox" id="inner-div">
+                    <div class="carousel-item active" id="div-item">
+                      <img class="d-block w-100" id="imgcom"
+                        src=""
                         alt="First slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(24).jpg"
-                        alt="Second slide">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="d-block w-100"
-                        src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(25).jpg"
-                        alt="Third slide">
                     </div>
                   </div>
                   <!--/.Slides-->
                   <!--Controls-->
-                  <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+                  <!-- <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                   </a>
                   <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                  </a>
+                  </a> -->
                   <!--/.Controls-->
-                  <ol class="carousel-indicators">
+                  <!-- <ol class="carousel-indicators">
                     <li data-target="#carousel-thumb" data-slide-to="0" class="active">
                       <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(23).jpg" width="60">
                     </li>
@@ -357,7 +347,7 @@
                     <li data-target="#carousel-thumb" data-slide-to="2">
                       <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(25).jpg" width="60">
                     </li>
-                  </ol>
+                  </ol> -->
                 </div>
                 <!--/.Carousel Wrapper-->
               </div>
@@ -382,7 +372,9 @@
                     <div id="collapseOne1" class="collapse show text-white" role="tabpanel" aria-labelledby="headingOne1"
                       data-parent="#accordionEx">
                       <div class="card-body">
-                          <Label><h5>Name Company:</h4> <p>Aqui name</p></Label>
+                          <Label><h5>Name Company:</h4> <p id="cname">Aqui name</p></Label>
+                            <hr>
+                          <Label><h5>Name Company:</h4> <p id="">Aqui name</p></Label>
                             <hr>
                           <Label><h5>otra cosa:</h4> <p>Aqui name</p></Label>  
                             <hr>
@@ -526,6 +518,7 @@
     <script src="logout.js"></script>
     <script src="status.js"></script>
     <script src="update.js"></script>
+    <script src="infocomp.js"></script>
     <!-- <script src="remove.js"></script> -->
     
     <script>
