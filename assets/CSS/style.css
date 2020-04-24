@@ -338,3 +338,20 @@ background-color: darkorange;
     background-color: brown;
     color: #FFF;
 }
+.scrollbar {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+    }
+    .force-overflow {
+    min-height: 380px;
+    }
+    
+    .scrollbar-primary::-webkit-scrollbar {
+    width: 8px;}
+    
+    .scrollbar-primary::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+     }
+    
