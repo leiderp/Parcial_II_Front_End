@@ -417,14 +417,10 @@ $('#maintb tbody').on('change','#statusOp',function(event){
   var nameOp= currow.find('td:eq(1)').text();
   var emailOp = currow.find('td:eq(2)').text();
   var dirOp = currow.find('td:eq(3)').text();
-  alert(idDocOp+""+nameOp+" "+emailOp+" "+dirOp)
+  var state = $("#statusOp option:selected").text();
+  changeState(idDocOp,state);
 
 });
-
-</script>
-
-<script>
-  
 </script>
 
 <script src="registerop.js"></script>
