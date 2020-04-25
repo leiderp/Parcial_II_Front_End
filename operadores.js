@@ -40,7 +40,8 @@ function agregarf(name, id, email, dir, sel, nosel){
                     </td>\
                     <td>\
                       <button value="bUpdate" id="bUpdate" title="bUpdate" class="btn btn-primary" data-toggle="modal" data-target="#modalPoll-2"><i class="fas fa-user-edit" aria-hidden="true"></i></button>&nbsp;\
-                      <button value="bDelete" id="bDelete" title="bDelete" class="btn btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>\
+                      <button value="bDelete" id="bDelete" title="bDelete" class="btn btn-danger"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>&nbsp;\
+                      <input type="button" id="bGraph" value="Result-Surv" class="btn login_btn" data-toggle="modal" data-target="#exampleModalScrollable">
                     </td>\
                 </tr>`;
     tbody.innerHTML += html;

@@ -402,6 +402,24 @@
         </div>
       </div>
     </div>
+     <!-- Modal -->
+<div class="modal fade animated zoomInDown" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-dark">
+        <h2 class="modal-title" id="exampleModalScrollableTitle">Survey Result</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" id="close">&times;</span>
+        </button>
+      </div>
+      <canvas id="speedChart" width="600" height="400"></canvas>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- Footer -->
     <footer class="page-footer font-small mdb-color pt-4">
     
@@ -504,6 +522,7 @@
       document.getElementById("hid").value = currow.find('td:eq(0)').text();
     });
 
+<<<<<<< HEAD
     $('#maintb tbody').on('click','#bDelete',function(){
       var currow = $(this).closest('tr');
       document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
@@ -513,6 +532,22 @@
       document.getElementById("hid").value = currow.find('td:eq(0)').text();
       remove(currow.find('td:eq(0)').text());
     });
+=======
+    $('#maintb tbody').on('click','#bGraph',function(){
+      var currow = $(this).closest('tr');
+      graphResults(currow.find('td:eq(0)').text());
+    });
+
+    // $('#maintb tbody').on('click','#bDelete',function(){
+    //   var currow = $(this).closest('tr');
+    //   document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
+    //   document.getElementById("name2").value = currow.find('td:eq(1)').text();
+    //   document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+    //   document.getElementById("address2").value = currow.find('td:eq(3)').text();
+    //   document.getElementById("hid").value = currow.find('td:eq(0)').text();
+    //   remove(currow.find('td:eq(0)').text());
+    // });
+>>>>>>> 66ecb1086052d9ea17db6718ab8123e6cff0a804
 
     $('#maintb tbody').on('change','#statusOp',function(event){
       var currow = $(this).closest('tr');
@@ -532,7 +567,12 @@
     <script src="status.js"></script>
     <script src="update.js"></script>
     <script src="infocomp.js"></script>
+<<<<<<< HEAD
     <script src="remove.js"></script>
+=======
+    <script src="graph.js"></script>
+    <!-- <script src="remove.js"></script> -->
+>>>>>>> 66ecb1086052d9ea17db6718ab8123e6cff0a804
     
     <!-- <script src="remove.js"></script> -->
     
@@ -554,6 +594,9 @@
       })
 
     </script>
+    <script>
+      
+      </script>
 
   </body>
 </html>
