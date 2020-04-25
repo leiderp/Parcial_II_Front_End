@@ -23,7 +23,7 @@ us.on("value", function(snapshot2) {
                 if(data.val().question == pregunta){
                     total=total+data.val().value;
                     if(data.val().answer == opcioncorrect){
-                        var valQ=data.val().value;
+                        varlQ=data.val().value;
                         vale = vale+valQ;
                     }
 
@@ -35,3 +35,4 @@ us.on("value", function(snapshot2) {
 
 
 });
+
