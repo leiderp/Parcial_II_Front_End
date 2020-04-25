@@ -20,95 +20,53 @@
   </head>
   <body>
     <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color bg-dark">
-  <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">Navbar</a>
-  <!-- Collapse button -->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <!-- Collapsible content -->
-  <div class="collapse navbar-collapse" id="basicExampleNav">
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <!-- Dropdown -->
-      <li class="nav-item dropdown multi-level-dropdown">
-        <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle w-100">Dropdown</a>
-        <ul class="dropdown-menu mt-2 rounded-0 primary-color border-0 z-depth-1">
-          <li class="dropdown-item dropdown-submenu p-0">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Click Me Too! </a>
-            <ul class="dropdown-menu ml-2 rounded-0 primary-color border-0 z-depth-1">
-              <li class="dropdown-item p-0">
-                <a href="#" class="text-white w-100">Hey</a>
-              </li>
-              <li class="dropdown-item p-0">
-                <a href="#" class="text-white w-100">Hi</a>
-              </li>
-              <li class="dropdown-item dropdown-submenu p-0">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Hello </a>
-                <ul class="dropdown-menu mr-2 rounded-0 primary-color border-0 z-depth-1 r-100 ">
-                  <li class="dropdown-item p-0">
-                    <a href="#" class="text-white w-100">Some</a>
-                  </li>
-                  <li class="dropdown-item p-0">
-                    <a href="#" class="text-white w-100">Text</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color bg-dark">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">Oil S.A.S</a>
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+        aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="basicExampleNav">
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
           </li>
-          <li class="dropdown-item dropdown-submenu">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-white w-100">Click me </a>
-            <ul class="dropdown-menu mr-2 rounded-0  primary-color border-0 z-depth-1 r-100 ">
-              <li class="dropdown-item p-0">
-                <a href="#" class="text-white w-100">How</a>
-              </li>
-              <li class="dropdown-item p-0">
-                <a href="#" class="text-white w-100">are</a>
-              </li>
-              <li class="dropdown-item p-0">
-                <a href="#" class="text-white w-100">you </a>
-              </li>
-            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="operators.html">Operators</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="questions.html">Questions</a>
           </li>
         </ul>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <form class="form-inline">
-          <div class="md-form my-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          </div>
-        </form>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i> Profile </a>
-        <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-          <a class="dropdown-item" href="#">My account</a>
-          <a class="dropdown-item" href="#">Log out</a>
-        </div>
-      </li>
-    </ul>
-    <!-- Links -->
-  </div>
-  <!-- Collapsible content -->
-</nav>
-<!--/.Navbar-->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <form class="form-inline">
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-user"></i> Profile </a>
+             <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modalQuickView">Info</a>
+              <a class="dropdown-item" href="#" onclick="logout()">Log out</a>
+             </div>
+          </li>
+        </ul>
+        <!-- Links -->
+      </div>
+      <!-- Collapsible content -->
+    </nav>
+ <!--/.Navbar-->
     <div class="container animated zoomInDown">
       <div class="d-flex justify-content-center h-100">
         <div class="cardList">
@@ -321,21 +279,108 @@
 
 </footer>
 <!-- Footer -->
+<!-- Modal: modalQuickView -->
+<div class="modal fade animated fadeInRightBig" id="modalQuickView" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-lg-5">
+          <!--Carousel Wrapper-->
+          <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails"
+            data-ride="carousel">
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox" id="inner-div">
+              <div class="carousel-item active" id="div-item">
+                <img class="d-block w-100" id="imgcom"
+                  src=""
+                  alt="First slide">
+              </div>
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+            <!-- <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
+            <!--/.Controls-->
+            <!-- <ol class="carousel-indicators">
+              <li data-target="#carousel-thumb" data-slide-to="0" class="active">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(23).jpg" width="60">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="1">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(24).jpg" width="60">
+              </li>
+              <li data-target="#carousel-thumb" data-slide-to="2">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(25).jpg" width="60">
+              </li>
+            </ol> -->
+          </div>
+          <!--/.Carousel Wrapper-->
+        </div>
+        <div class="col-lg-7">
+          <!--Accordion wrapper-->
+          <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+            <!-- Accordion card -->
+            <div class="card">
+
+              <!-- Card header -->
+              <div class="card-header" role="tab" id="headingOne1">
+                <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+                  aria-controls="collapseOne1">
+                  <h5 class="mb-0 text-white">
+                    INFO COMPANY <i class="fas fa-angle-down rotate-icon"></i>
+                  </h5>
+                </a>
+              </div>
+
+              <!-- Card body -->
+              <div id="collapseOne1" class="collapse show text-white" role="tabpanel" aria-labelledby="headingOne1"
+                data-parent="#accordionEx">
+                <div class="card-body scrollbar scrollbar-primary force-overflow" >
+                    <Label><h5>Name of the legal representative:</h4> <p id="usname"></p></Label>
+                      <hr>
+                    <Label><h5>ID document:</h4> <p id="iddo">Aqui name</p></Label>  
+                      <hr>
+                    <Label><h5>Legal representative's email:</h4> <p id="emailus">Aqui name</p></Label>  
+                      <hr>
+                    <Label><h5>Legal representative's phone:</h4> <p id="phoneus">Aqui name</p></Label>  
+                      <hr>
+                      <Label><h5>Name Company:</h4> <p id="comname">Aqui name</p></Label>  
+                        <hr>
+                </div>
+              </div>
+
+            </div>
+            <!-- Accordion card -->
+          </div>
+          <!-- Accordion wrapper -->
+
+          <div class="card-body">
+            <div class="text-center">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close
+                <i class="far fa-times-circle ml-2" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="/__/firebase/7.8.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="/__/firebase/7.8.1/firebase-analytics.js"></script>
-
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
-
+    
 <script>
 var densityCanvas = document.getElementById("densityChart");
 
@@ -383,5 +428,31 @@ var barChart = new Chart(densityCanvas, {
   options: chartOptions
 });
 </script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-analytics.js"></script>
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+ apiKey: "AIzaSyDKkFJ-ZzrCpDCGeQaKpcTdpNUx6uwPjRo",
+ authDomain: "parcial-ii-front-end.firebaseapp.com",
+ databaseURL: "https://parcial-ii-front-end.firebaseio.com",
+ projectId: "parcial-ii-front-end",
+ storageBucket: "parcial-ii-front-end.appspot.com",
+ messagingSenderId: "52311190442",
+ appId: "1:52311190442:web:248f9274a983089a3199d3",
+ measurementId: "G-H3RC31SKM3"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+</script>
+<script src="infocomp.js"></script>
   </body>
 </html>
