@@ -13,8 +13,10 @@ us.on("value", function(snapshot) {
 
     query.orderByChild("uid").equalTo(snapshot.val().uidcompany).on("value", function(snapshot) {
         tbody.innerHTML = "";
-        snapshot.forEach(function(data) {
-            questiosHTML(data.val().question, data.val().option1, data.val().option2)
+        i = 1;
+        snapshot.forEach(function(data) { 
+            questiosHTML(data.val().question, data.val().option1, data.val().option2,i);
+            i++;
         });
     });
 
@@ -28,13 +30,13 @@ us.on("value", function(snapshot) {
 })
 
 
-function questiosHTML(pregunta, op1, op2){
+function questiosHTML(pregunta, op1, op2, i){
     let html2 = `<div class="flex-wrap">\
-                    <h3>${pregunta}</h3>\
+                    <h3 id="pregunta${i}">${pregunta}</h3>\
                     <ul class="votacion index">\
-                        <li><input name="valor" type="radio"><span>${op1}</span></li>\
-                        <li><input name="valor" type="radio"><span>${op2}</span></li
-                        tbody         </ul>\
+                        <li><input name="valor" id="radio${i}1" value="option1" type="radio"><span>${op1}</span></li>\
+                        <li><input name="valor" id="radio${i}2" value="option2" type="radio"><span>${op2}</span></li
+                    </ul>\
                 </div>`;
     tbody.innerHTML += html2;
 }
