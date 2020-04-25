@@ -1,38 +1,64 @@
+function registrarEncuesta(){
 
+    
+    uuid = localStorage.uid;
+    var us = db.ref("users/" + uuid);
 
+    us.on("value", function(snapshot2) {
+        console.log(snapshot2.val().done);
+        if(snapshot2.val().done == "false"){
 
+            var pregunta = "";
+            var check = false;
+            var opcioncorrect = "";
+            var opcion1="";
+            var opcion2="";
+            for (var i = 1; i < 6; i++) {
+                pregunta = document.getElementById("textarea"+i).value;
+                opcion1 = document.getElementById("label"+i+"1").textContent;
+                opcion2 = document.getElementById("label"+i+"2").textContent;
+                check = document.getElementById("radio"+i+"1").checked;
+                var valorAns = document.getElementById("score"+i).value;
+                if(check==true){
+                    opcioncorrect=document.getElementById("radio"+i+"1").value;
+                }else{
+                    opcioncorrect=document.getElementById("radio"+i+"2").value;
+                }
+                writeq(pregunta, opcion1, opcion2, opcioncorrect, valorAns);
+            }
 
+            db.ref("users/" + uuid).update({
+                "done": "true",
+            });
+         
+        }else{
+            alert("the survey has already been created");
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
+    });
+    //Preguntas
+    
+}
 
 
 function writeq(pregunta, op1, op2, rc, val){
 
     useruid = localStorage.uid;
 
+    var us = db.ref("users/" + useruid);
     var key = generateHexString(20);
 
-    firebase.database().ref("questions/" + useruid).set({
+
+    firebase.database().ref("questions/" + key).set({
         "question": pregunta,
-        "option1": op1,vl,
+        "option1": op1,
         "option2": op2,
         "answer": rc,
         "questionkey": key,
         "value": val,
         "uid": useruid,
     }).then(function(){
-        
+                
     });
 
 }
@@ -46,30 +72,6 @@ function generateHexString(length) {
     return ret.substring(0,length);
 }
 
-function getques(){
 
-    useruid = localStorage.uid;
 
-    db = firebase.database();
-    var qs = db.ref("questions/" + useruid);
 
-    var query = db.ref("questions");
-    
-    query.orderByChild("uid").equalTo(useruid).on("value", function(snapshot) {
-        // tbody.innerHTML = "";
-        snapshot.forEach(function(data) {
-            questiosHTML(data.val().question, data.val().option1, data.val().option2)
-        });
-    });
-
-}
-
-function questiosHTML(pregunta, op1, op2){
-    let html2 = `<div class="flex-wrap">\
-                    <h3>${pregunta}</h3>\
-                    <ul class="votacion index">\
-                        <li><input name="valor" type="radio"><span>${op1}</span></li>\
-                        <li><input name="valor" type="radio"><span>${op2}</span></li
-                    </ul>\
-                </div>`;
-}

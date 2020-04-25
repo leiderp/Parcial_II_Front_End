@@ -6,7 +6,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         us.on("value", function(snapshot) {
           if(snapshot.val().usertype == "operator"){
-            // location.href = "questions.html";
+            localStorage.uid = firebase.auth().currentUser.uid;
+            location.href = "questions.html";
           }else{
             localStorage.uid = firebase.auth().currentUser.uid;
             location.href = "operators.html"

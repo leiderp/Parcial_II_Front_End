@@ -43,7 +43,8 @@ $("#btnCreate").click(function() {
                         "password": userpassword,
                         "uid": user.uid,
                         "usertype": "operator",
-                        "status" : "Enable"
+                        "status" : "Enable",
+                        "uidcompany": localStorage.uid,
                     }).then(function(){
 
                         document.getElementById("useremail").value= "";
