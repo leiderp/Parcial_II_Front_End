@@ -522,7 +522,6 @@
       document.getElementById("hid").value = currow.find('td:eq(0)').text();
     });
 
-<<<<<<< HEAD
     $('#maintb tbody').on('click','#bDelete',function(){
       var currow = $(this).closest('tr');
       document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
@@ -532,7 +531,12 @@
       document.getElementById("hid").value = currow.find('td:eq(0)').text();
       remove(currow.find('td:eq(0)').text());
     });
-=======
+
+    $('#maintb tbody').on('click','#dq',function(){
+      var currow = $(this).closest('tr');
+      removeques(currow.find('td:eq(0)').text());
+    });
+
     $('#maintb tbody').on('click','#bGraph',function(){
       var currow = $(this).closest('tr');
       graphResults(currow.find('td:eq(0)').text());
@@ -547,7 +551,6 @@
     //   document.getElementById("hid").value = currow.find('td:eq(0)').text();
     //   remove(currow.find('td:eq(0)').text());
     // });
->>>>>>> 66ecb1086052d9ea17db6718ab8123e6cff0a804
 
     $('#maintb tbody').on('change','#statusOp',function(event){
       var currow = $(this).closest('tr');
@@ -567,12 +570,10 @@
     <script src="status.js"></script>
     <script src="update.js"></script>
     <script src="infocomp.js"></script>
-<<<<<<< HEAD
     <script src="remove.js"></script>
-=======
     <script src="graph.js"></script>
+    <!-- <script src="delques.js"></script> -->
     <!-- <script src="remove.js"></script> -->
->>>>>>> 66ecb1086052d9ea17db6718ab8123e6cff0a804
     
     <!-- <script src="remove.js"></script> -->
     
