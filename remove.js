@@ -1,46 +1,79 @@
-// function remove(idd){
+function remove(idd){
 
-//     db = firebase.database();
-//     var query = db.ref("users");
+    var query = db.ref("users");
 
-//     query.orderByChild("iddocument").equalTo(idd).on("value", function(snapshot) {
-//         snapshot.forEach(function(data) {
-//             console.log(data.val().email);
-//             console.log(data.val().uid);
-//             firebase.auth().signInWithEmailAndPassword(data.val().email, data.val().password).then(function(){
-//                 var user = firebase.auth().currentUser;
-//                 console.log(data.val().email);
-//                 console.log(useremail);
-
-//                 db.ref("users/" + data.val().uid).remove();
-
-//                 // user.updateEmail(useremail).then(function() {
-//                 //     db.ref("users/" + data.val().uid).update({
-//                 //         "name": name,
-//                 //         "iddocument": idDoc,
-//                 //         "documenttype": docuType,
-//                 //         "email": useremail,
-//                 //         "imageURL" : downloadURL,
-//                 //         "address": address,
-//                 //     });
-//                 //     // Update successful.
-//                 // }).catch(function(error) {
-//                 //     // An error happened.
-//                 // });
-                  
-                  
+    query.orderByChild("iddocument").equalTo(idd).on("value", function(snapshot) {
+        snapshot.forEach(function(data) {
 
 
-//             }).catch(function(error) {
-//                 // Handle Errors here.
-//                 var errorCode = error.code;
-//                 var errorMessage = error.message;
-//                 // ...
-//                 window.alert("error: "+errorMessage);
-//             }); 
-//         });
-//     });
-// }
+            var adaRef = firebase.database().ref('users/' + data.val().uid);
+            adaRef.remove().then(function() {
+                console.log("Remove succeeded.")
+            })
+            .catch(function(error) {
+              console.log("Remove failed: " + error.message)
+            });
+
+
+
+
+            firebase.auth().signInWithEmailAndPassword(data.val().email, data.val().password).then(function(){
+                console.log(data.val().email);
+                console.log(useremail); 
+
+                var user = firebase.auth().currentUser;
+
+                if (user) {
+                    
+                    user.delete().then(function() {
+            
+                    }).catch(function(error) {
+                        window.alert("error: "+errorMessage);
+                    });
+                  // User is signed in.
+                } else {
+                  // No user is signed in.
+                }
+
+
+                
+            
+            }).catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // ...
+                window.alert("error: "+errorMessage);
+            }); 
+            
+            return true;
+        });
+    });
+
+    // db = firebase.database();
+    // var query = db.ref("users");
+
+    // query.orderByChild("iddocument").equalTo(idd).on("value", function(snapshot) {
+    //     snapshot.forEach(function(data) {
+    //         console.log(data.val().email);
+    //         console.log(data.val().uid);
+    //         firebase.auth().signInWithEmailAndPassword(data.val().email, data.val().password).then(function(){
+    //             // var user = firebase.auth().currentUser;
+    //             console.log(data.val().email);
+    //             console.log(useremail);
+
+    //             db.ref("users/" + data.val().uid).remove();
+
+    //         }).catch(function(error) {
+    //             // Handle Errors here.
+    //             var errorCode = error.code;
+    //             var errorMessage = error.message;
+    //             // ...
+    //             window.alert("error: "+errorMessage);
+    //         }); 
+    //     });
+    // });
+}
     // mountainsRef.on('state_changed', function(snapshot){
     //     // Observe state change events such as progress, pause, and resume
     //     // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded

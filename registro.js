@@ -44,6 +44,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     "usertype": "company",
                     "done": "false",
                     "uidcompany": uid,
+                    "ask" : true,
                 }).then(function(){
                     localStorage.uid = firebase.auth().currentUser.uid;
                     location.href = "operators.html";

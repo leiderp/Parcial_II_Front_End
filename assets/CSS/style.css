@@ -94,10 +94,14 @@ html,body{
     color: white;
     cursor: pointer;
 }
-.card-header h3{
+.card-header h2{
     color: white;
 }
 
+#f{
+    display: inline-block;
+    padding-left: 200px;
+}
 .social_icon{
     position: absolute;
     right: 20px;
@@ -338,6 +342,10 @@ background-color: darkorange;
     background-color: brown;
     color: #FFF;
 }
+
+#btn-send{
+    display: inline-block;
+} 
 
 #accordionEx{
     background: #BA8B02;  /* fallback for old browsers */

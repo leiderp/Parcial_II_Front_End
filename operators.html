@@ -504,15 +504,15 @@
       document.getElementById("hid").value = currow.find('td:eq(0)').text();
     });
 
-    // $('#maintb tbody').on('click','#bDelete',function(){
-    //   var currow = $(this).closest('tr');
-    //   document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
-    //   document.getElementById("name2").value = currow.find('td:eq(1)').text();
-    //   document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
-    //   document.getElementById("address2").value = currow.find('td:eq(3)').text();
-    //   document.getElementById("hid").value = currow.find('td:eq(0)').text();
-    //   remove(currow.find('td:eq(0)').text());
-    // });
+    $('#maintb tbody').on('click','#bDelete',function(){
+      var currow = $(this).closest('tr');
+      document.getElementById("IDdoc2").value= currow.find('td:eq(0)').text();
+      document.getElementById("name2").value = currow.find('td:eq(1)').text();
+      document.getElementById("useremail2").value = currow.find('td:eq(2)').text();
+      document.getElementById("address2").value = currow.find('td:eq(3)').text();
+      document.getElementById("hid").value = currow.find('td:eq(0)').text();
+      remove(currow.find('td:eq(0)').text());
+    });
 
     $('#maintb tbody').on('change','#statusOp',function(event){
       var currow = $(this).closest('tr');
@@ -532,7 +532,7 @@
     <script src="status.js"></script>
     <script src="update.js"></script>
     <script src="infocomp.js"></script>
-    <!-- <script src="remove.js"></script> -->
+    <script src="remove.js"></script>
     
     <!-- <script src="remove.js"></script> -->
     

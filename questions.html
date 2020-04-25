@@ -90,8 +90,11 @@
     <div class="container animated zoomInDown">
       <div class="d-flex justify-content-center h-100">
         <div class="cardQs">
-          <div class="card-header bg-dark" >
-            <h2 class="d-flex justify-content-center">QUESTIONS</h2>
+          <div class="card-header bg-dark">
+            <div class="form-group" id="btn-send" >
+              <input onclick="responder()" type="button" value="Send" class="btn login_btn">
+            </div>
+            <h2 class=" justify-content-center" id="f">QUESTIONS</h2>
           </div>
           <div class="cardQs-body text-white">
             <form>
@@ -482,6 +485,7 @@ aria-hidden="true">
       <script src="logout.js"></script>
       <script src="preguntas.js"></script>
       <script src="infocomp.js"></script>
+      <script src="results.js"></script>
 
       <script>
         var oucom = document.getElementById("navtohid");
@@ -490,13 +494,14 @@ aria-hidden="true">
 
         var us = db.ref("users/" + localuser);
 
-
-
         us.on("value", function(snapshot2) {
           console.log(snapshot2.val().usertype);
           console.log(localuser);
           if(snapshot2.val().usertype != "company"){
             oucom.style.display = 'none';
+          }else{
+            var btn = document.getElementById("btn-send");
+            btn.style.display = 'none';
           }
 
         });

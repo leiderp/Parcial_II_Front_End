@@ -45,6 +45,7 @@ $("#btnCreate").click(function() {
                         "usertype": "operator",
                         "status" : "Enable",
                         "uidcompany": localStorage.uid,
+                        "ask": true,
                     }).then(function(){
 
                         document.getElementById("useremail").value= "";
